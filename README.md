@@ -1,7 +1,7 @@
 # CSC126-FP
 **THIS IS A PROTECTED INFORMATIONS**
 
-Accesssed Collaborator :
+Accessed Collaborator :
 1. Luqman
 2. Ian
 3. Juan
