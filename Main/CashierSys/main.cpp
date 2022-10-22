@@ -82,7 +82,7 @@ void cashier_menu() {
 	cout << "|-----------------------------------------|" << endl;
 	cout << "| 1) Cash Calculator ------------------ 1 |" << endl;
 	cout << "| 2) Total Profit --------------------- 2 |" << endl;
-	cout << "| 3) Software Information ------------- 3 |" << endl;
+	cout << "| 3) Program Information ------------- 3 |" << endl;
 	cout << "| 4) Log Out -------------------------- 4 |" << endl; 
 	cout << "-------------------------------------------" << endl;
 }
@@ -195,9 +195,9 @@ float cash_calculator() {
 
 //-----------------------------------------------------------------------------------------------------
 
-void software_informations() {
+void program_informations() {
 	cout << "------------------------" << endl;
-	cout << "SOFTWARE INFORMATIONS" << endl;
+	cout << "PROGRAM INFORMATIONS" << endl;
 	cout << "Maintainer : Luqman Hanis Daniel bin Khailmi" << endl;
 	cout << "Current version : 1.2" << endl;
 	cout << "Publish date : 21/10/2022" << endl;
@@ -247,7 +247,7 @@ int main() {
 					bool continue_info = true;
 					
 					while (continue_info == true) {
-						software_informations();
+						program_informations();
 						string exit;
 						cout << "Exit? Press 'q' : ";
 						cin >> exit;
