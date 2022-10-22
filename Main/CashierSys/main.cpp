@@ -199,8 +199,9 @@ void software_informations() {
 	cout << "------------------------" << endl;
 	cout << "SOFTWARE INFORMATIONS" << endl;
 	cout << "Maintainer : Luqman Hanis Daniel bin Khailmi" << endl;
-	cout << "Current version : 1.0" << endl;
-	cout << "Last update : 21/10/2022" << endl;
+	cout << "Current version : 1.2" << endl;
+	cout << "Publish date : 21/10/2022" << endl;
+	cout << "Last update : 23/10/2022" << endl;
 	cout << "------------------------" << endl;
 }
 
