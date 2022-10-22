@@ -29,7 +29,7 @@ bool login() {
 		cout << "Please enter staff ID : ";
 		cin >> user_id;
 		
-		// if teh user enters the correct ID
+		// if the user enters the correct ID
 		if (user_id == staff1_id || user_id == staff2_id) {
 			id_check = true;
 		}
@@ -48,7 +48,13 @@ bool login() {
 		
 		// if teh user enters the correct ID
 		if (user_password == staff1_password || user_password == staff2_password) {
-			password_check = true;
+			if (user_id == staff1_id && user_password == staff1_password) {
+				password_check = true;
+			} else if (user_id == staff2_id && user_password == staff2_password) {
+				password_check = true;
+			} else {
+				cout << "Invalid staff password!" << endl;
+			}
 		}
 		// if the user enters the wrong password
 		else {
