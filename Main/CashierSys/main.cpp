@@ -96,7 +96,7 @@ void menu() {
 	cout << "| 1) Maggi Goreng ------------------ RM 5 |" << endl;
 	cout << "| 2) Maggi Kari -------------------- RM 5 |" << endl;
 	cout << "| 3) Extrajoss --------------------- RM 3 |" << endl;
-	cout << "| 4) Quit ------------------------------- |" << endl; 
+	cout << "| 4) Done ------------------------------- |" << endl; 
 	cout << "-------------------------------------------" << endl;
 }
 
@@ -105,6 +105,7 @@ void menu() {
 float cash_calculator() {
 	cout << "You had been redirected to the Cash Calculator system." << endl;
 	float totalItem = 0;
+	float definitelyTotalPrice = 0;
 	float totalPrice = 0;
 	bool continue_transactions = true;
 	while (continue_transactions == true) {
@@ -145,12 +146,51 @@ float cash_calculator() {
 			cout << "TotalPrice : RM " << totalPrice << endl;
 		} else if (order == 4) {
 			// quit
-			cout << "Quitting..." << endl;                   
+			cout << "Done..." << endl;
+			
+			// make sure the customers have enough money to purchase
+			bool enough = false;
+			while (enough == false) {
+				if (totalPrice == 0) {
+					enough = true;
+				} else {
+					cout << "-------------------------------------" << endl;
+					cout << "Total items : " << totalItem << endl;
+					cout << "Total amount : RM " << totalPrice << endl;
+					cout << "-------------------------------------" << endl;
+					
+					// get total cash from customer
+					cout << "Input money : RM ";
+					float custMoney;
+					cin >> custMoney;
+					
+					if (custMoney - totalPrice >= 0) {
+						cout << "Total change is : RM " << custMoney - totalPrice << endl;
+						cout << "Thank you!" << endl;
+						definitelyTotalPrice = definitelyTotalPrice + totalPrice;
+						enough = true;
+						
+						// reset for new customer
+						totalPrice = 0;
+					} else {
+						cout << "Not enough money!" << endl;
+					}
+				}
+				
+			}
+			
+			}
+		
+		cout << "Continue transactions? (y/n) : ";
+		string answer;
+		cin >> answer;
+		if (answer == "n") {
 			continue_transactions = false;
+			return definitelyTotalPrice;
 		}
 		
 	}
-	return totalPrice;
+	return definitelyTotalPrice;
 }
 
 //-----------------------------------------------------------------------------------------------------
@@ -245,5 +285,3 @@ int main() {
 	}
 	return 0;
 }
-
-// good luck!
