@@ -82,7 +82,7 @@ void cashier_menu() {
 	cout << "|-----------------------------------------|" << endl;
 	cout << "| 1) Cash Calculator ------------------ 1 |" << endl;
 	cout << "| 2) Total Profit --------------------- 2 |" << endl;
-	cout << "| 3) Program Information ------------- 3 |" << endl;
+	cout << "| 3) Program Information -------------- 3 |" << endl;
 	cout << "| 4) Log Out -------------------------- 4 |" << endl; 
 	cout << "-------------------------------------------" << endl;
 }
@@ -168,10 +168,13 @@ float cash_calculator() {
 						cout << "Total change is : RM " << custMoney - totalPrice << endl;
 						cout << "Thank you!" << endl;
 						definitelyTotalPrice = definitelyTotalPrice + totalPrice;
+						
 						enough = true;
 						
 						// reset for new customer
 						totalPrice = 0;
+						
+						return definitelyTotalPrice;
 					} else {
 						cout << "Not enough money!" << endl;
 					}
@@ -179,14 +182,6 @@ float cash_calculator() {
 				
 			}
 			
-			}
-		
-		cout << "Continue transactions? (y/n) : ";
-		string answer;
-		cin >> answer;
-		if (answer == "n") {
-			continue_transactions = false;
-			return definitelyTotalPrice;
 		}
 		
 	}
@@ -195,13 +190,12 @@ float cash_calculator() {
 
 //-----------------------------------------------------------------------------------------------------
 
-void program_informations() {
+void software_informations() {
 	cout << "------------------------" << endl;
 	cout << "PROGRAM INFORMATIONS" << endl;
 	cout << "Maintainer : Luqman Hanis Daniel bin Khailmi" << endl;
 	cout << "Current version : 1.2" << endl;
-	cout << "Publish date : 21/10/2022" << endl;
-	cout << "Last update : 23/10/2022" << endl;
+	cout << "Last update : 21/10/2022" << endl;
 	cout << "------------------------" << endl;
 }
 
@@ -247,7 +241,7 @@ int main() {
 					bool continue_info = true;
 					
 					while (continue_info == true) {
-						program_informations();
+						software_informations();
 						string exit;
 						cout << "Exit? Press 'q' : ";
 						cin >> exit;
