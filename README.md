@@ -1,10 +1,5 @@
-# CSC126-FP
-**THIS IS A PROTECTED INFORMATIONS**
+# Cashier-Sys
 
-Accessed Collaborator :
-1. Luqman
-2. Ian
-3. Juan
-4. Adam
+A simple cashier system program that help ease the cashiers calculation work.
 
 *contact* : luqmanhanisdaniel@gmail.com
